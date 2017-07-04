@@ -1,2 +1,2 @@
-# Edun
-Educational portal with gamefication
+# EDUN
+EDucational portal with gamefication for fUN

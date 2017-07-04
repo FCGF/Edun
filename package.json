@@ -1,0 +1,25 @@
+{
+  "name": "EDUN",
+  "version": "1.0.0",
+  "description": "fUN EDucation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FCGF/Edun.git"
+  },
+  "keywords": [
+    "fun",
+    "education",
+    "gamefication",
+    "portal"
+  ],
+  "author": "FCGF",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FCGF/Edun/issues"
+  },
+  "homepage": "https://github.com/FCGF/Edun"
+}
