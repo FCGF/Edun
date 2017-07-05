@@ -46,8 +46,7 @@
         errorPlacement: function (label, element) {
             if (element.attr("type") === "checkbox" || element.attr("type") === "radio") {
                 element.parent().append(label);
-            }
-            else {
+            } else {
                 label.insertAfter(element);
             }
         }
@@ -78,7 +77,7 @@
         }
     });
 
-    $(".progress").click(function(){
+    $(".progress").click(function () {
         window.location.replace("./../html/leaderboard.html");
     })
 
