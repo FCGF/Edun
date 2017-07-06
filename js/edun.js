@@ -61,6 +61,31 @@
         }
     });
 
+    $("#consumable-form").validate({
+        rules: {
+            reg_description: "required",
+            reg_price: {
+                required: true,
+                minlength: 1
+            },
+            reg_rules: "required"
+        },
+        errorClass: "form-invalid",
+        errorPlacement: function (label, element) {
+            if (element.attr("type") === "checkbox" || element.attr("type") === "radio") {
+                element.parent().append(label);
+            } else {
+                label.insertAfter(element);
+            }
+        }
+    });
+
+    $("#consumable-form").submit(function () {
+        remove_loading($(this));
+
+        window.location.replace("./../html/atividade.html");
+    });
+
     $("#forgot-password-form").validate({
         rules: {
             fp_email: "required",
@@ -106,7 +131,7 @@
 
             setTimeout(function () {
                 form_success($form);
-            }, 2000);
+            }, 1000);
         }
     }
 

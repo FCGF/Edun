@@ -21,7 +21,7 @@
     <!--[if lt IE 7]>
                 <p class="browsehappy">Você está usando um navegador <strong>desatualizado</strong>. Por favor <a href="#">atualize seu navegador</a> para melhorar sua experiencia.</p>
             <![endif]-->
-    <div class="progress">
+    <div class="progress fixed-top">
         <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="20" aria-valuemin="0"
             aria-valuemax="20" style="width: 20%"></div>
         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="20" aria-valuemin="0"
@@ -33,7 +33,7 @@
         <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0"
             aria-valuemax="20" style="width: 0%"></div>
     </div>
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
 
         <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,13 +60,15 @@
 
         </div>
     </nav>
-    <div class="card">
-        <img class="card-img-top col-12 col-md-6 offset-md-3" src="./../images/disciplines.jpg" alt="Disciplinas" style="max-height: 320px; max-width: 640px;">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="./discipline.html">Física</a></li>
-            <li class="list-group-item"><a href="./discipline.html">Química</a></li>
-            <li class="list-group-item"><a href="./discipline.html">Biologia</a></li>
-        </ul>
+    <div class="middle">
+        <div class="card">
+            <img class="card-img-top col-12 col-md-6 offset-md-3" src="./../images/disciplines.jpg" alt="Disciplinas" style="max-height: 320px; max-width: 640px;">
+            <ul class="list-group list-group-flush">
+                <a href="./discipline.html"><li class="list-group-item">Física</li></a>
+                <a href="./discipline.html"><li class="list-group-item">Química</li></a>
+                <a href="./discipline.html"><li class="list-group-item">Biologia</li></a>
+            </ul>
+        </div>
     </div>
     <script src="./../js/jquery/jquery-3.2.1.js" defer></script>
     <script src="./../js/jquery-validate/jquery.validate.min.js" defer></script>
