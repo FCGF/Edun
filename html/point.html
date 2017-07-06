@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Edun - criar consumivel</title>
+    <title>Edun - pontuar</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="./../css/font-awesome/css/font-awesome.min.css">
@@ -39,7 +39,7 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand text-center" href="./main.html">Criar consumível</a>
+        <a class="navbar-brand text-center" href="./main.html">Pontuar</a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -65,38 +65,54 @@
     </nav>
     <div class="text-center">
         <div class="middle">
-            <div class="logo">Atividade</div>
-            <div class="consumable-form-1">
-                <form id="consumable-form" class="text-left">
-                    <div class="consumable-form-main-message"></div>
-                    <div class="main-consumable-form">
-                        <div class="consumable-group">
-                            <div class="form-group">
-                                <label for="reg_description" class="sr-only">Descrição</label>
-                                <input type="text" class="form-control" id="reg_description" name="reg_description" placeholder="Descrição">
-                            </div>
-                            <div class="form-group">
-                                <label for="reg_price" class="sr-only">Preço</label>
-                                <input type="number" class="form-control" id="reg_price" name="reg_price" placeholder="Preço">
-                            </div>
-                            <div class="form-group">
-                                <label for="reg_rules" class="sr-only">Regras</label>
-                                <textarea type="text" class="form-control" id="reg_rules" name="reg_rules" placeholder="Regras" rows="10"></textarea>
-                            </div>
-                            <button type="submit" class="consumable-button"><i class="fa fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                </form>
+            <div class="card">
+                <div class="card-block input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-danger btn-number" data-type="minus" data-field="experience">
+                            <span class="fa fa-minus"></span>
+                        </button>
+                    </span>
+                    <input type="number" class="form-control input-number" id="experience" name="experience" value="0" min="0">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="experience">
+                            <span class="fa fa-plus"></span>
+                        </button>
+                    </span>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Jezuis</span>
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Paulox</span>
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Duda</span>
+                        </label>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 
     <footer class="footer">
         <div class="container">
-            <a class="btn btn-secondary float-right" href="./atividade.html" role="button">Criar</a>
+            <a class="btn btn-secondary float-right" href="./discipline.html" role="button"><i class="fa fa-check"></i></a>
+            <a class="btn btn-secondary float-left" href="./discipline.html" role="button"><i class="fa fa-close"></i></a>
         </div>
     </footer>
-    
+
     <script src="./../js/jquery/jquery-3.2.1.js" defer></script>
     <script src="./../js/jquery-validate/jquery.validate.min.js" defer></script>
     <script src="./../js/jquery-validate/localization/messages_pt_BR.min.js" defer></script>

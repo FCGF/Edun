@@ -86,6 +86,36 @@
         window.location.replace("./../html/atividade.html");
     });
 
+    $("#activity-form").validate({
+        rules: {
+            reg_title: "required",
+            reg_description: "required",
+            reg_date: "required",
+            reg_weight: {
+                required: true,
+                minlength: 1
+            },
+            reg_experience: {
+                required: true,
+                minlength: 1
+            }
+        },
+        errorClass: "form-invalid",
+        errorPlacement: function (label, element) {
+            if (element.attr("type") === "checkbox" || element.attr("type") === "radio") {
+                element.parent().append(label);
+            } else {
+                label.insertAfter(element);
+            }
+        }
+    });
+
+    $("#activity-form").submit(function () {
+        remove_loading($(this));
+
+        window.location.replace("./../html/atividade.html");
+    });
+
     $("#forgot-password-form").validate({
         rules: {
             fp_email: "required",
@@ -99,6 +129,64 @@
         if (options['useAJAX'] == true) {
             dummy_submit_form($(this));
             return false;
+        }
+    });
+
+    $('.btn-number').click(function (e) {
+        e.preventDefault();
+
+        var fieldName = $(this).attr('data-field');
+        var type = $(this).attr('data-type');
+        var input = $("input[name='" + fieldName + "']");
+        var currentVal = parseInt(input.val());
+        if (!isNaN(currentVal)) {
+            if (type == 'minus') {
+                if (currentVal > input.attr('min')) {
+                    input.val(currentVal - 1).change();
+                }
+                if (parseInt(input.val()) == input.attr('min')) {
+                    $(this).attr('disabled', true);
+                }
+
+            } else if (type == 'plus') {
+                input.val(currentVal + 1).change();
+            }
+        } else {
+            input.val(0);
+        }
+    });
+
+    $('.input-number').focusin(function () {
+        $(this).data('oldValue', $(this).val());
+    });
+
+    $('.input-number').change(function () {
+        var minValue = parseInt($(this).attr('min'));
+        var valueCurrent = parseInt($(this).val());
+
+        var name = $(this).attr('name');
+        if (valueCurrent >= minValue) {
+            $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled')
+        } else {
+            alert('Sorry, the minimum value was reached');
+            $(this).val($(this).data('oldValue'));
+        }
+        $(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled')
+    });
+
+    $(".input-number").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+            // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) ||
+            // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+            // let it happen, don't do anything
+            return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
         }
     });
 

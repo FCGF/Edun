@@ -14,9 +14,10 @@ body {
   padding-top: 70px;
 }
 
-.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse{
+.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse {
   margin-top: 15px;
 }
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -232,6 +233,104 @@ a:hover {
   color: #e74c3c;
 }
 
+.etc-activity-form {
+  color: #919191;
+  padding: 10px 20px;
+}
+
+.etc-activity-form p {
+  margin-bottom: 5px;
+}
+
+.activity-form-1 {
+  max-width: 300px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.main-activity-form {
+  position: relative;
+}
+
+.activity-form-1 .form-control {
+  border: 0;
+  box-shadow: 0 0 0;
+  border-radius: 0;
+  background: transparent;
+  color: #555555;
+  padding: 7px 0;
+  font-weight: bold;
+  height: auto;
+}
+
+.activity-form-1 .form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.activity-form-1 .form-control:-moz-placeholder,
+.activity-form-1 .form-control::-moz-placeholder,
+.activity-form-1 .form-control:-ms-input-placeholder {
+  color: #999999;
+}
+
+.activity-form-1 .form-group {
+  margin-bottom: 0;
+  border-bottom: 2px solid #efefef;
+  padding-right: 20px;
+  position: relative;
+}
+
+.activity-form-1 .form-group:last-child {
+  border-bottom: 0;
+}
+
+.activity-group {
+  background: #ffffff;
+  color: #999999;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+.activity-group-checkbox {
+  padding: 5px 0;
+}
+
+.activity-form-1 .activity-button {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  background: #ffffff;
+  color: #999999;
+  padding: 11px 0;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  border: 5px solid #efefef;
+  border-radius: 50%;
+  transition: all ease-in-out 500ms;
+}
+
+.activity-form-1 .activity-button:hover {
+  color: #555555;
+  transform: rotate(450deg);
+}
+
+.activity-form-1 .activity-button.clicked {
+  color: #555555;
+}
+
+.activity-form-1 .activity-button.clicked:hover {
+  transform: none;
+}
+
+.activity-form-1 .activity-button.clicked.success {
+  color: #2ecc71;
+}
+
+.activity-form-1 .activity-button.clicked.error {
+  color: #e74c3c;
+}
+
 label.form-invalid {
   position: absolute;
   top: 0;
@@ -312,6 +411,33 @@ label.form-invalid:after {
 }
 
 .consumable-form-main-message.error {
+  border-left-color: #e74c3c;
+}
+
+.activity-form-main-message {
+  background: #ffffff;
+  color: #999999;
+  border-left: 3px solid transparent;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  height: 0;
+  padding: 0 20px 0 17px;
+  opacity: 0;
+  transition: all ease-in-out 200ms;
+}
+
+.activity-form-main-message.show {
+  height: auto;
+  opacity: 1;
+  padding: 10px 20px 10px 17px;
+}
+
+.activity-form-main-message.success {
+  border-left-color: #2ecc71;
+}
+
+.activity-form-main-message.error {
   border-left-color: #e74c3c;
 }
 
